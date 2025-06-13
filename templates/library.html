@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Library</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/spotifylogoimage.png') }}" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}" />
+  </head>
+  <body>
+    <nav class="navbar border-bottom border-body" data-bs-theme="dark" style="background-color: rgb(0, 0, 0);">
+  <div class="container-fluid d-flex align-items-center">
+    <a class="navbar-brand" href="/main">
+      <img src="{{ url_for('static', filename='images/spotifylogoimage.png') }}" alt="Logo" width="30" height="30" class="d-inline-block align-text-top" />
+      Spotify
+    </a>
+
+    <div class="ms-auto d-flex align-items-center">
+      <a href="/logout" class="btn btn-outline-light me-3" onclick="return confirmLogout()">Logout</a>
+      <script>
+        function confirmLogout() {
+          return confirm('Are you sure you want to log out?');
+        }
+      </script>
+      <a href="/userpage" title="Profile">
+        <img src="{{ url_for('static', filename='images/profile_logo.jpg') }}" alt="Profile" width="40" height="40" class="rounded-circle" style="object-fit: cover;" />
+      </a>
+    </div>
+  </div>
+</nav>
+
+
+    <div class="d-flex">
+      <!-- sidebar -->
+      <div class="sidebar">
+        <a href="/main"><strong>Main</strong></a>
+        <a href="/librarypage">Library</a>
+
+        <div class="library-title">📌pinned</div>
+        <a href="/downloaded" class="button"><img src="{{ url_for('static', filename='images/download_logo.png') }}" alt="Logo" width="100" height="100" /></a>
+        <a href="/librarypage" class="button"><img src="{{ url_for('static', filename='images/library_logo.png') }}" alt="Logo" width="100" height="100" /></a>
+        <a href="/artistspage" class="button"><img src="{{ url_for('static', filename='images/artists_logo.png') }}" alt="Logo" width="100" height="100" /></a>
+        <a href="/infopage" class="button"><img src="{{ url_for('static', filename='images/info_logo.png') }}" alt="Logo" width="100" height="100" /></a>
+      </div>
+<div class="container mt-4">
+          <h2 class="text-white mb-4">Albums</h2>
+          <div class="row">
+            <div class="col-md-2">
+              <a href="/starboypage" class="btn album-card transparent-card text-white">
+                <img src="{{ url_for('static', filename='images/starboyimage.png') }}" class="card-img-top" alt="Starboy" />
+                <div class="card-body py-1">
+                  <p class="card-text">Starboy</p>
+                  <h6>The Weeknd</h6>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-2">
+              <a href="/astroworldpage" class="btn album-card transparent-card text-white">
+                <img src="{{ url_for('static', filename='images/astroworldimage.png') }}" class="card-img-top" alt="Astroworld" />
+                <div class="card-body py-1">
+                  <p class="card-text">Astroworld</p>
+                  <h6>Travis Scott</h6>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-2">
+              <a href="/currentspage" class="btn album-card transparent-card text-white">
+                <img src="{{ url_for('static', filename='images/currentsimage.png') }}" class="card-img-top" alt="Currents" />
+                <div class="card-body py-1">
+                  <p class="card-text">Currents</p>
+                  <h6>Tame Impala</h6>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-2">
+              <a href="/heavenorhellpage" class="btn album-card transparent-card text-white">
+                <img src="{{ url_for('static', filename='images/heavenorhellimage.png') }}" class="card-img-top" alt="Heaven or Hell" />
+                <div class="card-body py-1">
+                  <p class="card-text">Heaven or Hell</p>
+                  <h6>Don Toliver</h6>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-2">
+              <a href="/graduationpage" class="btn album-card transparent-card text-white">
+                <img src="{{ url_for('static', filename='images/graduationimage.png') }}" class="card-img-top" alt="Graduation" />
+                <div class="card-body py-1">
+                  <p class="card-text">Graduation</p>
+                  <h6>Kanye West</h6>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-2">
+              <a href="/evolvepage" class="btn album-card transparent-card text-white">
+                <img src="{{ url_for('static', filename='images/evolveimage.png') }}" class="card-img-top" alt="Graduation" />
+                <div class="card-body py-1">
+                  <p class="card-text">Evolve</p>
+                  <h6>Imagine Dragons</h6>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-2">
+              <a href="/shortandsweetpage" class="btn album-card transparent-card text-white">
+                <img src="{{ url_for('static', filename='images/shortandsweetimage.png') }}" class="card-img-top" alt="Graduation" />
+                <div class="card-body py-1">
+                  <p class="card-text">Short n' Sweet</p>
+                  <h6>Sabrina Carpenter</h6>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-2">
+              <a href="/thrillerpage" class="btn album-card transparent-card text-white">
+                <img src="{{ url_for('static', filename='images/thrillerimage.png') }}" class="card-img-top" alt="Thriller" />
+                <div class="card-body py-1">
+                  <p class="card-text">Thriller</p>
+                  <h6>Michael Jackson</h6>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+</body>
+</html>

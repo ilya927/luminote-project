@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/spotifylogoimage.png') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+</head>
+<body>
+    <div class="container">
+        <img src="{{ url_for('static', filename='images/spotifylogoimage.png') }}" alt="Spotify Logo" class="logo" />
+        <p>{{ message }}</p>
+        <h1>Registration</h1>
+        <form action="/reg" method="post">
+            <input type="email" name="email" placeholder="Email" value="{{ email }}">
+            <input type="password" name="password1" placeholder="Password">
+            <input type="password" name="password2" placeholder="Confirm Password">
+            <input type="submit" name="register" value="Register">
+        </form>
+        <a href="/">Back to main</a>
+    </div>
+</body>
+</html>

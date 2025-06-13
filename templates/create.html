@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add Track</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+</head>
+<body>
+  <div class="form-container">
+    <h1>Add a New Track</h1>
+    <form method="POST" action="/save" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="title">Track Title</label>
+        <input type="text" id="title" name="title" required placeholder="song title">
+      </div>
+
+      <div class="form-group">
+        <label for="file">MP3 File</label>
+        <input type="file" id="file" name="file" accept=".mp3" required>
+      </div>
+
+      <button type="submit">Save</button>
+    </form>
+    <a class="back-link" href="/downloaded">← Back to Tracks</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,116 @@
+/* Общие стили */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: rgb(26, 26, 26);
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+/* === НАВИГАЦИЯ (Navbar) === */
+nav.navbar {
+  background-color: #181818; /* Темный фон для navbar */
+  padding: 10px 0;
+  border-bottom: 2px solid #1DB954; /* Зеленая линия под navbar */
+}
+
+nav.navbar .navbar-brand {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav.navbar .navbar-brand img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+nav.navbar .navbar-brand:hover {
+  color: #1DB954; /* Зеленый акцент на hover */
+}
+
+
+/* Хедер */
+.artist-header {
+  position: relative;
+  height: 800px;
+  overflow: hidden;
+}
+
+.artist-header .bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(40%);
+  z-index: 1;
+}
+
+.overlay-text {
+  position: relative;
+  z-index: 2;
+  padding-left: 30px;
+  padding-bottom: 30px;
+}
+
+/* Прозрачная карточка для треков */
+.transparent-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+/* Стили треков */
+.list-group-item {
+  background-color: transparent !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  padding: 16px 20px;
+  font-weight: 500;
+}
+
+/* Альбомы */
+.albums-grid .album img {
+  width: 100%;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.albums-grid .album img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* Кнопки соцсетей */
+.social-btn {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.social-btn:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+
+
+.social-btn {
+  width: 180px; /* фиксированная ширина */
+  height: 45px; /* одинаковая высота */
+  font-size: 16px;
+  text-align: center;
+  white-space: nowrap; /* запрет переноса текста */
+  overflow: hidden;     /* скрывает всё, что выходит за границу */
+  text-overflow: ellipsis; /* троеточие, если текст не влезает */
+}

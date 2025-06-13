@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/spotifylogoimage.png') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+</head>
+<body>
+    <div class="container">
+        <img src="{{ url_for('static', filename='images/spotifylogoimage.png') }}" alt="Spotify Logo" class="logo" />
+        <p>{{message}}</p>
+        <h1>Log in</h1>
+        <form action="/auth" method="post">
+            <input type="email" name="email" placeholder="Email" value="{{ email }}">
+            <input type="password" name="password" placeholder="Password" value="{{ password }}">
+            <input type="submit" name="Auth" value="Log In">
+        </form>
+        <a href="/">Back to main</a>
+    </div>
+</body>
+</html>
