@@ -3,18 +3,35 @@ body {
   background-color: rgb(26, 26, 26);
   margin: 0;
   margin-bottom: 150px;
-  height: 80vh;
+  height: 100vh;
   color: white;
   font-family: sans-serif;
 }
 
 /* === ЛЕВЫЙ САЙДБАР === */
 .sidebar {
-  width: 150px;
-  background-color: #121212;
-  color: white;
+  width: 145px;
   padding: 20px;
+  box-sizing: border-box;
+  background-color: #121212;
   height: 100vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar .btn {
+  width: 100%;
+  text-align: center;
+  padding: 6px 12px;      /* одинаковый padding */
+  margin: 0;              /* убираем внешние отступы */
+  line-height: 1.2;       /* одинаковый line-height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.875rem;    /* размер шрифта btn-sm */
+  border-radius: 0.2rem;  /* как в btn-sm */
 }
 .sidebar a {
   color: white;

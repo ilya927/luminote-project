@@ -10,30 +10,41 @@ body {
 
 /* === ЛЕВЫЙ САЙДБАР (navbar) === */
 .sidebar {
-  width: 150px;
-  background-color: #181818; /* Темный фон для navbar */
-  color: white;
+  width: 145px;
   padding: 20px;
-  height: 100vh;
-  border-radius: 15px; /* Закругляем углы */
+  background-color: #121212;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* отступы между кнопками */
 }
 
+.sidebar .btn {
+  width: 100%;
+  text-align: center;
+  padding: 6px 12px;      /* одинаковый padding */
+  margin: 0;              /* убираем внешние отступы */
+  line-height: 1.2;       /* одинаковый line-height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.875rem;    /* размер шрифта btn-sm */
+  border-radius: 0.2rem;  /* как в btn-sm */
+}
 .sidebar a {
   color: white;
   text-decoration: none;
   display: block;
   margin-bottom: 10px;
-  transition: color 0.3s ease;
 }
-
 .sidebar a:hover {
-  color: #1DB954; /* Зеленый акцент на hover */
+  color: #1DB954;
 }
 .sidebar img {
   background-color: white;
   padding: 10px;
   border-radius: 12px;
 }
+
 .library-title {
   margin-top: 30px;
   font-weight: bold;
