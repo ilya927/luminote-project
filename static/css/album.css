@@ -1,34 +1,34 @@
-/* === ОБЩИЕ СТИЛИ === */
+/* body */
 body {
   background: rgb(26, 26, 26);
   margin: 0;
   margin-bottom: 150px;
-  height: auto; /*прошлое 200hv*/
+  height: auto;
   color: white;
   font-family: sans-serif;
 }
 
-/* === ЛЕВЫЙ САЙДБАР (navbar) === */
+/*  left sidebar  */
 .sidebar {
   width: 145px;
   padding: 20px;
   background-color: #121212;
   display: flex;
   flex-direction: column;
-  gap: 10px; /* отступы между кнопками */
+  gap: 10px;
 }
 
 .sidebar .btn {
   width: 100%;
   text-align: center;
-  padding: 6px 12px;      /* одинаковый padding */
-  margin: 0;              /* убираем внешние отступы */
-  line-height: 1.2;       /* одинаковый line-height */
+  padding: 6px 12px;
+  margin: 0;
+  line-height: 1.2;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 0.875rem;    /* размер шрифта btn-sm */
-  border-radius: 0.2rem;  /* как в btn-sm */
+  font-size: 0.875rem;
+  border-radius: 0.2rem;
 }
 .sidebar a {
   color: white;
@@ -50,11 +50,11 @@ body {
   font-weight: bold;
 }
 
-/* === НАВИГАЦИЯ (Navbar) === */
+/* navbar */
 nav.navbar {
-  background-color: #181818; /* Темный фон для navbar */
+  background-color: #181818;
   padding: 10px 0;
-  border-bottom: 2px solid #1DB954; /* Зеленая линия под navbar */
+  border-bottom: 2px solid #1DB954;
 }
 
 nav.navbar .navbar-brand {
@@ -70,10 +70,10 @@ nav.navbar .navbar-brand img {
 }
 
 nav.navbar .navbar-brand:hover {
-  color: #1DB954; /* Зеленый акцент на hover */
+  color: #1DB954;
 }
 
-/* === ОБЛОЖКА АЛЬБОМА === */
+/* album cover */
 .spotify-album {
   display: flex;
   align-items: center;
@@ -134,7 +134,7 @@ nav.navbar .navbar-brand:hover {
   margin-top: 10px;
 }
 
-/* === ПЛЕЕР === */
+/* player */
 .player {
   position: fixed;
   bottom: 0;
@@ -149,11 +149,11 @@ nav.navbar .navbar-brand:hover {
   box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Добавлена обертка для левой и центральной части */
+/* player styles */
 .player .left-section {
   display: flex;
   align-items: center;
-  width: 300px; /* фиксированная ширина */
+  width: 300px;
   flex-shrink: 0;
 }
 
@@ -165,7 +165,7 @@ nav.navbar .navbar-brand:hover {
   min-width: 200px;
 }
 
-/* Оставшиеся стили */
+
 .player .album-cover {
   width: 50px;
   height: 50px;
@@ -196,7 +196,7 @@ nav.navbar .navbar-brand:hover {
 
 .control-buttons i:hover {
   transform: scale(1.2);
-  color: #1DB954; /* Зеленый акцент для кнопок */
+  color: #1DB954;
 }
 
 .control-buttons .btn {
@@ -206,7 +206,7 @@ nav.navbar .navbar-brand:hover {
 }
 
 
-/* === ПРОГРЕСС-БАР === */
+/* progress bar */
 .player-progress {
   position: fixed;
   bottom: 0;
@@ -222,7 +222,7 @@ nav.navbar .navbar-brand:hover {
   height: 100%;
 }
 
-/* === ТРЕКЛИСТ === */
+/* tracklist */
 .transparent-card {
   background-color: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
@@ -269,7 +269,7 @@ nav.navbar .navbar-brand:hover {
   text-align: right;
 }
 
-/* === ХОВЕР ЭФФЕКТ ДЛЯ КАРТОЧЕК === */
+/* effects */
 .hover-card {
   transition: background-color 0.3s ease;
 }

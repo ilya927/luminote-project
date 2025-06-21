@@ -38,7 +38,6 @@ def reg_user(email, password):
     con = sqlite3.connect('SpotifyDB')
     cursor = con.cursor()
 
-    # Проверяем, есть ли пользователь с таким email
     cursor.execute("SELECT * FROM users WHERE email = ?", (email,))
     row = cursor.fetchone()
 
@@ -46,7 +45,6 @@ def reg_user(email, password):
         con.close()
         return False
 
-    # Вставляем нового пользователя
     cursor.execute("INSERT INTO users (email, password) VALUES (?, ?)", (email, password_hash))
     con.commit()
     con.close()

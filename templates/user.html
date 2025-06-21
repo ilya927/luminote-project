@@ -7,17 +7,15 @@
     <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/luminotelogoimage.png') }}" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/tracks.css') }}" />
   </head>
   <body>
-    <!-- Navbar -->
-    <nav class="navbar border-bottom border-body" data-bs-theme="dark" style="background-color: rgb(0, 0, 0);">
+    <nav class="navbar border-bottom border-body" data-bs-theme="dark" style="background-color: black;">
       <div class="container-fluid d-flex align-items-center">
         <a class="navbar-brand" href="/main">
           <img src="{{ url_for('static', filename='images/luminotelogoimage.png') }}" alt="Logo" width="30" height="30" class="d-inline-block align-text-top" />
           Luminote
         </a>
-
         <div class="ms-auto d-flex align-items-center">
           <a href="/logout" class="btn btn-outline-light me-3" onclick="return confirmLogout()">Logout</a>
           <script>
@@ -33,32 +31,93 @@
     </nav>
 
     <div class="d-flex">
-      <!-- sidebar -->
-      <div class="sidebar">
-        <a href="/main" type="button" class="btn btn-outline-light btn-sm" ><strong>Main</strong></a>
-        <!-- Кнопка вызова модального окна -->
-        <button type="button" class="btn btn-outline-light btn-sm" data-bs-toggle="modal" data-bs-target="#searchModal">
-          Search
-        </button>
-        <a href="/librarypage" type="button" class="btn btn-outline-light btn-sm" >Library</a>
-
-        <div class="library-title">📌pinned</div>
-        <a href="/downloaded" class="button"><img src="{{ url_for('static', filename='images/download_logo.png') }}" alt="Logo" width="100" height="100" /></a>
-        <a href="/librarypage" class="button"><img src="{{ url_for('static', filename='images/library_logo.png') }}" alt="Logo" width="100" height="100" /></a>
-        <a href="/artistspage" class="button"><img src="{{ url_for('static', filename='images/artists_logo.png') }}" alt="Logo" width="100" height="100" /></a>
-        <a href="/infopage" class="button"><img src="{{ url_for('static', filename='images/info_logo.png') }}" alt="Logo" width="100" height="100" /></a>
-      </div>
-
       <div class="container py-5 d-flex align-items-bottom" style="max-width: 600px;">
         <img src="{{ url_for('static', filename='images/profile_logo.jpg') }}"
              alt="Profile"
              class="rounded-circle me-4"
              style="width: 150px; height: 150px; object-fit: cover;" />
-        <!-- Text -->
         <h1 class="mb-0">Welcome, User!</h1>
       </div>
     </div>
 
+    <div class="container mt-5">
+      <h3>Recently Played Albums</h3>
+      <div class="d-flex flex-wrap">
+        <div class="card m-2" style="width: 150px;">
+          <img src="{{ url_for('static', filename='images/thrillerimage.png') }}" class="card-img-top" alt="Album 1">
+          <div class="card-body p-2">
+            <h6 class="card-title mb-0">Thriller</h6>
+            <small>Travis Scott</small>
+          </div>
+        </div>
+        <div class="card m-2" style="width: 150px;">
+          <img src="{{ url_for('static', filename='images/starboyimage.png') }}" class="card-img-top" alt="Album 2">
+          <div class="card-body p-2">
+            <h6 class="card-title mb-0">Starboy</h6>
+            <small>The Weeknd</small>
+          </div>
+        </div>
+        <div class="card m-2" style="width: 150px;">
+          <img src="{{ url_for('static', filename='images/heavenorhellimage.png') }}" class="card-img-top" alt="Album 3">
+          <div class="card-body p-2">
+            <h6 class="card-title mb-0">Heaven or Hell</h6>
+            <small>Don Toliver</small>
+          </div>
+        </div>
+        <div class="card m-2" style="width: 150px;">
+          <img src="{{ url_for('static', filename='images/astroworldimage.png') }}" class="card-img-top" alt="Album 4">
+          <div class="card-body p-2">
+            <h6 class="card-title mb-0">Astroworld</h6>
+            <small>Travis Scott</small>
+          </div>
+        </div>
+        <div class="card m-2" style="width: 150px;">
+          <img src="{{ url_for('static', filename='images/evolveimage.png') }}" class="card-img-top" alt="Album 5">
+          <div class="card-body p-2">
+            <h6 class="card-title mb-0">Evolve</h6>
+            <small>Imagine Dragons</small>
+          </div>
+        </div>
+        <div class="card m-2" style="width: 150px;">
+          <img src="{{ url_for('static', filename='images/shortandsweetimage.png') }}" class="card-img-top" alt="Album 6">
+          <div class="card-body p-2">
+            <h6 class="card-title mb-0">Short n’ Sweet</h6>
+            <small>Sabrina Carpenter</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-5">
+      <h3>Favorite Genres</h3>
+      <ul>
+        <li>Hip-Hop</li>
+        <li>Trap</li>
+        <li>R&B</li>
+        <li>Pop</li>
+        <li>Electronic</li>
+      </ul>
+    </div>
+
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content bg-dark text-white">
+          <div class="modal-header">
+            <h5 class="modal-title" id="searchModalLabel">Search Tracks</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="searchForm">
+              <input type="search" name="q" class="form-control" placeholder="Enter search query" required autofocus />
+              <div id="searchResults" class="mt-3"></div>
+              <button type="submit" class="btn btn-success mt-2">Search</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/search.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

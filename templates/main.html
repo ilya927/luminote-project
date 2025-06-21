@@ -38,7 +38,6 @@
       <!-- sidebar -->
       <div class="sidebar">
         <a href="/main" type="button" class="btn btn-outline-light btn-sm" ><strong>Main</strong></a>
-        <!-- Кнопка вызова модального окна -->
         <button type="button" class="btn btn-outline-light btn-sm" data-bs-toggle="modal" data-bs-target="#searchModal">
           Search
         </button>
@@ -216,7 +215,7 @@
       </div>
     </div>
 
-    <!-- Модальное окно поиска -->
+    <!-- modal search -->
     <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content bg-dark text-white">
@@ -228,7 +227,7 @@
             <form id="searchForm">
               <input type="search" name="q" class="form-control" placeholder="Enter search query" required autofocus />
               <div id="searchResults" class="mt-3"></div>
-              <button type="submit" class="btn btn-primary mt-2">Search</button>
+              <button type="submit" class="btn btn-success mt-2">Search</button>
             </form>
           </div>
         </div>

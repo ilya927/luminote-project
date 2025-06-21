@@ -41,7 +41,7 @@ const tracks = [
   // Update the current song info
   function updateSongInfo(index) {
     currentSongTitle.textContent = tracks[index].title;
-    currentArtistName.textContent = 'Imagine Dragons'; // Assuming the artist is fixed
+    currentArtistName.textContent = 'Imagine Dragons';
     audio.src = tracks[index].src;
     audio.play();
     playPauseButton.innerHTML = '<i class="bi bi-pause-fill"></i>';
@@ -95,5 +95,5 @@ const tracks = [
 
   // Initial song setup (this ensures song info appears immediately after page load)
   window.addEventListener('load', () => {
-    updateSongInfo(currentTrackIndex); // Ensure first song is loaded right away
+    updateSongInfo(currentTrackIndex);
   });

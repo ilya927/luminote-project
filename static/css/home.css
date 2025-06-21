@@ -1,7 +1,7 @@
 body {
     margin: 0;
     height: 100vh;
-    background-color: #121212; /* темный фон, как у Spotify */
+    background-color: #121212;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,27 +10,27 @@ body {
 }
 
 .container {
-    background-color: #282828; /* чуть светлее фон для карточки */
+    background-color: #282828;
     width: 400px;
     padding: 40px 30px;
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
     display: flex;
-    flex-direction: column; /* элементы идут вертикально */
+    flex-direction: column;
     align-items: center;
-    gap: 15px; /* уменьшено расстояние между элементами */
+    gap: 15px;
 }
 
 .logo {
     width: 150px;
-    margin-bottom: 10px; /* уменьшенный отступ снизу */
+    margin-bottom: 10px;
 }
 
 form {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 10px; /* уменьшено расстояние между полями */
+    gap: 10px;
 }
 
 input[type="email"],

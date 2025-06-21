@@ -1,4 +1,4 @@
-/* === ОБЩИЕ СТИЛИ === */
+/* body */
 body {
   background-color: rgb(26, 26, 26);
   margin: 0;
@@ -8,7 +8,7 @@ body {
   font-family: sans-serif;
 }
 
-/* === ЛЕВЫЙ САЙДБАР === */
+/* sidebar */
 .sidebar {
   width: 145px;
   padding: 20px;
@@ -24,14 +24,14 @@ body {
 .sidebar .btn {
   width: 100%;
   text-align: center;
-  padding: 6px 12px;      /* одинаковый padding */
-  margin: 0;              /* убираем внешние отступы */
-  line-height: 1.2;       /* одинаковый line-height */
+  padding: 6px 12px;
+  margin: 0;
+  line-height: 1.2;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 0.875rem;    /* размер шрифта btn-sm */
-  border-radius: 0.2rem;  /* как в btn-sm */
+  font-size: 0.875rem;
+  border-radius: 0.2rem;
 }
 .sidebar a {
   color: white;
@@ -53,11 +53,11 @@ body {
   font-weight: bold;
 }
 
-/* === НАВИГАЦИЯ (Navbar) === */
+/* navbar */
 nav.navbar {
-  background-color: #181818; /* Темный фон для navbar */
+  background-color: #181818;
   padding: 10px 0;
-  border-bottom: 2px solid #1DB954; /* Зеленая линия под navbar */
+  border-bottom: 2px solid #1DB954;
 }
 
 nav.navbar .navbar-brand {
@@ -73,18 +73,18 @@ nav.navbar .navbar-brand img {
 }
 
 nav.navbar .navbar-brand:hover {
-  color: #1DB954; /* Зеленый акцент на hover */
+  color: #1DB954;
 }
 
 
 
-/* === ОБЩИЕ СТИЛИ ДЛЯ ОБЛОЖЕК === */
+/* album covers */
 .album-cover {
   object-fit: cover;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* === КРУГЛЫЕ КАРТИНКИ АРТИСТОВ === */
+/* circe artist card */
 .artist-card .album-cover {
   border-radius: 50%;
   width: 170px;
@@ -94,7 +94,7 @@ nav.navbar .navbar-brand:hover {
   object-fit: cover;
 }
 
-/* === КАРТОЧКИ АРТИСТОВ === */
+/* artist card */
 .artist-card {
   background-color: #181818;
   border-radius: 12px;
@@ -105,10 +105,10 @@ nav.navbar .navbar-brand:hover {
 }
 .artist-card:hover {
   background-color: #747474;
-  transform: perspective(1000px) scale(1) translateZ(-10px); /*отдаляем */
+  transform: perspective(1000px) scale(1) translateZ(-10px);
 }
 
-/* === КАРТОЧКИ АЛЬБОМА === */
+/* album card */
 .album-card {
   background-color: #181818;
   border-radius: 8px;
@@ -118,10 +118,10 @@ nav.navbar .navbar-brand:hover {
 }
 .album-card:hover {
   background-color: #404040;
-  transform: perspective(1000px) scale(1) translateZ(-10px); /*отдаляем */
+  transform: perspective(1000px) scale(1) translateZ(-10px);
 }
 
-/* === КАРТОЧКИ BOOTSTRAP на всякий случай === */
+/* === boostrap cards just in case === */
 .card {
   max-width: 250px;
   margin: 0 auto;
@@ -133,7 +133,7 @@ nav.navbar .navbar-brand:hover {
   background-color: #747474;
 }
 
-/* === ПЛЕЕР === */
+/* player */
 .player {
   position: fixed;
   bottom: 0;
@@ -187,7 +187,7 @@ nav.navbar .navbar-brand:hover {
   padding: 10px;
 }
 
-/* === ПРОГРЕСС-БАР === */
+/* progress bar */
 .player-progress {
   position: fixed;
   bottom: 0;
@@ -203,9 +203,9 @@ nav.navbar .navbar-brand:hover {
 }
 
 .transparent-card {
-  background-color: rgba(255, 255, 255, 0.05); /* почти прозрачный белый */
-  backdrop-filter: blur(10px); /* эффект размытия фона */
-  border: 1px solid rgba(255, 255, 255, 0.1); /* полупрозрачная рамка */
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }

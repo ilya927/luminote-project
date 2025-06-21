@@ -1,4 +1,4 @@
-/* === ОБЩИЕ СТИЛИ === */
+/* body */
 body {
   background-color: rgb(26, 26, 26);
   margin: 0;
@@ -7,7 +7,7 @@ body {
   font-family: sans-serif;
 }
 
-/* === НАВИГАЦИЯ (Navbar) === */
+/* navbar */
 nav.navbar {
   background-color: #181818;
   padding: 10px 0;
@@ -33,13 +33,13 @@ nav.navbar .navbar-brand:hover {
   color: #1DB954;
 }
 
-/* === КОНТЕНТ === */
+/* content */
 .main-content {
   padding: 40px 60px;
   max-width: 100%;
 }
 
-/* === КНОПКА "Add New Track" === */
+/* add new track button */
 .add-track-btn {
   display: inline-block;
   margin-top: 20px;
@@ -57,7 +57,7 @@ nav.navbar .navbar-brand:hover {
   background-color: #17a64a;
 }
 
-/* === ТАБЛИЦА ТРЕКОВ === */
+/* tracklist */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -88,7 +88,7 @@ tr:hover {
   background-color: rgba(255, 255, 255, 0.05);
 }
 
-/* Увеличиваем размер audio-плеера в таблице */
+/* audio player styles */
 td audio {
   width: 100%;
   height: 40px;

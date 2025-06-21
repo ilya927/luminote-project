@@ -1,4 +1,4 @@
-/* Общие стили */
+/* body */
 body {
   font-family: 'Poppins', sans-serif;
   background-color: rgb(26, 26, 26);
@@ -6,11 +6,11 @@ body {
   padding: 0;
   color: #fff;
 }
-/* === НАВИГАЦИЯ (Navbar) === */
+/* navbar */
 nav.navbar {
-  background-color: #181818; /* Темный фон для navbar */
+  background-color: #181818;
   padding: 10px 0;
-  border-bottom: 2px solid #1DB954; /* Зеленая линия под navbar */
+  border-bottom: 2px solid #1DB954;
 }
 
 nav.navbar .navbar-brand {
@@ -26,11 +26,11 @@ nav.navbar .navbar-brand img {
 }
 
 nav.navbar .navbar-brand:hover {
-  color: #1DB954; /* Зеленый акцент на hover */
+  color: #1DB954;
 }
 
 
-/* Хедер */
+
 .artist-header {
   position: relative;
   height: 800px;
@@ -55,7 +55,7 @@ nav.navbar .navbar-brand:hover {
   padding-bottom: 30px;
 }
 
-/* Прозрачная карточка для треков */
+/* transparent card */
 .transparent-card {
   background-color: rgba(255, 255, 255, 0.05);
   border-radius: 15px;
@@ -65,7 +65,7 @@ nav.navbar .navbar-brand:hover {
   overflow: hidden;
 }
 
-/* Стили треков */
+/* tracks style */
 .list-group-item {
   background-color: transparent !important;
   border-color: rgba(255, 255, 255, 0.1) !important;
@@ -73,7 +73,7 @@ nav.navbar .navbar-brand:hover {
   font-weight: 500;
 }
 
-/* Альбомы */
+/* albums*/
 .albums-grid .album img {
   width: 100%;
   border-radius: 15px;
@@ -86,7 +86,7 @@ nav.navbar .navbar-brand:hover {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
 }
 
-/* Кнопки соцсетей */
+/* social media */
 .social-btn {
   background-color: rgba(255, 255, 255, 0.05);
   color: #fff;
@@ -106,11 +106,11 @@ nav.navbar .navbar-brand:hover {
 
 
 .social-btn {
-  width: 180px; /* фиксированная ширина */
-  height: 45px; /* одинаковая высота */
+  width: 180px;
+  height: 45px;
   font-size: 16px;
   text-align: center;
-  white-space: nowrap; /* запрет переноса текста */
-  overflow: hidden;     /* скрывает всё, что выходит за границу */
-  text-overflow: ellipsis; /* троеточие, если текст не влезает */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

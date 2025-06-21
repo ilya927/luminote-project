@@ -69,7 +69,7 @@ def delete_track(id):
         try:
             os.remove(file_path)
         except Exception as e:
-            print(f"Ошибка при удалении файла: {e}")
+            print(f"error while deleting file: {e}")
 
     sql = f"DELETE FROM tracks WHERE id = {id}"
     connection = sqlite3.connect('TracksDB')
@@ -84,7 +84,7 @@ def update_track(id, title, file):
     if track is None:
         return
 
-    new_file = track.file  # если не обновляем файл
+    new_file = track.file
 
     if file is not None and file.filename != '':
         old_file_path = os.path.join('uploads', track.file)
