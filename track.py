@@ -14,7 +14,7 @@ class Track:
 
 
 def get_tracks(user_id):
-    con = sqlite3.connect('TracksDB')
+    con = sqlite3.connect('LuminoteDB')
     cursor = con.cursor()
     cursor.execute("SELECT * FROM tracks WHERE user_id = ?", (user_id,))
     rows = cursor.fetchall()
@@ -37,7 +37,7 @@ def create_track(title, file, user_id):
 
     sql = "INSERT INTO tracks (title, filename, user_id) VALUES (?, ?, ?)"
 
-    con = sqlite3.connect('TracksDB')
+    con = sqlite3.connect('LuminoteDB')
     cursor = con.cursor()
     cursor.execute(sql, (title, file_name, user_id))
     con.commit()
@@ -46,7 +46,7 @@ def create_track(title, file, user_id):
 
 
 def get_track(id):
-    connection = sqlite3.connect('TracksDB')
+    connection = sqlite3.connect('LuminoteDB')
     sql = f'SELECT * FROM tracks where id = {id}'
     cursor = connection.cursor()
     cursor.execute(sql)
@@ -72,7 +72,7 @@ def delete_track(id):
             print(f"error while deleting file: {e}")
 
     sql = f"DELETE FROM tracks WHERE id = {id}"
-    connection = sqlite3.connect('TracksDB')
+    connection = sqlite3.connect('LuminoteDB')
     cursor = connection.cursor()
     cursor.execute(sql)
     connection.commit()
@@ -96,7 +96,7 @@ def update_track(id, title, file):
         file.save(file_path)
         new_file = file_name
 
-    con = sqlite3.connect('TracksDB')
+    con = sqlite3.connect('LuminoteDB')
     cursor = con.cursor()
     cursor.execute(
         "UPDATE tracks SET title = ?, filename = ? WHERE id = ?",

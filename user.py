@@ -17,7 +17,7 @@ def verify_password(password, password_hash):
     return hash_password(password) == password_hash
 
 def check_user(email, password):
-    connection = sqlite3.connect('SpotifyDB')
+    connection = sqlite3.connect('LuminoteDB')
     cursor = connection.cursor()
     cursor.execute("SELECT id, password FROM users WHERE email = ?", (email,))
     row = cursor.fetchone()
@@ -35,7 +35,7 @@ def check_user(email, password):
 def reg_user(email, password):
     password_hash = hash_password(password)
 
-    con = sqlite3.connect('SpotifyDB')
+    con = sqlite3.connect('LuminoteDB')
     cursor = con.cursor()
 
     cursor.execute("SELECT * FROM users WHERE email = ?", (email,))
